@@ -7,6 +7,8 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { DefaultLayoutComponent } from './layout/default-layout/default-layout.component';
 import { HeaderOnlyComponent } from './layout/header-only/header-only.component';
+import { TopDestinationComponent } from './components/top-destination/top-destination.component';
+import { BigHeaderComponent } from './components/big-header/big-header.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { HeaderOnlyComponent } from './layout/header-only/header-only.component'
     HeaderComponent,
     FooterComponent,
     DefaultLayoutComponent,
-    HeaderOnlyComponent
+    HeaderOnlyComponent,
+    TopDestinationComponent,
+    BigHeaderComponent
   ],
   imports: [
     BrowserModule,
