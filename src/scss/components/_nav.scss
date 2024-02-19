@@ -1,0 +1,38 @@
+.nav {
+      &__list {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+      }
+
+      &__item {
+      }
+
+      &__link {
+            cursor: pointer;
+      }
+
+      &__title {
+            color: var(--Typography-2, #676a6c);
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.15;
+      }
+
+      &__link.active &__title {
+            color: #2d3134;
+            position: relative;
+
+            &::after {
+                  content: '';
+                  position: absolute;
+                  bottom: -2px;
+                  left: 1px;
+                  width: 12px;
+                  height: 2px;
+                  border-radius: 1px;
+                  background: #ff7b29;
+            }
+      }
+}

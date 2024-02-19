@@ -1,0 +1,42 @@
+// @use '/src/scss/abstract/' as abstract;
+
+@use '../../../scss/abstract/' as abstract;
+
+.header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 99;
+      background-color: #fff;
+      &__inner {
+            padding-top: 24px;
+            padding-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+      }
+}
+
+.top {
+      &__logo {
+            cursor: pointer;
+      }
+
+      &__action {
+      }
+
+      &__action-btn {
+            cursor: pointer;
+            border-radius: 8px;
+            background: var(--Color-2, #31c3e0);
+            padding: 16px 28px;
+            color: #fff;
+            text-align: center;
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.14;
+            letter-spacing: 1.34px;
+      }
+}
