@@ -9,6 +9,8 @@ import { DefaultLayoutComponent } from './layout/default-layout/default-layout.c
 import { HeaderOnlyComponent } from './layout/header-only/header-only.component';
 import { TopDestinationComponent } from './components/top-destination/top-destination.component';
 import { BigHeaderComponent } from './components/big-header/big-header.component';
+import { BestToursComponent } from './components/best-tours/best-tours.component';
+import { TopArticlesComponent } from './components/top-articles/top-articles.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { BigHeaderComponent } from './components/big-header/big-header.component
     DefaultLayoutComponent,
     HeaderOnlyComponent,
     TopDestinationComponent,
-    BigHeaderComponent
+    BigHeaderComponent,
+    BestToursComponent,
+    TopArticlesComponent
   ],
   imports: [
     BrowserModule,
