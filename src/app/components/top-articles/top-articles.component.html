@@ -22,68 +22,26 @@
                   <div class="row row-cols-2 row-cols-lg-1">
                         <div class="col">
                               <div class="articles__card special">
-                                    <img class="articles__thumb" alt="" src="../../../assets/images/article-1.png" />
+                                    <img class="articles__thumb" alt="" src="{{ listBlog[0].thumbnail }}" />
                                     <div class="articles__row">
                                           <h3 class="articles__name">
-                                                The real voyage does not consist in seeking new
+                                                {{ listBlog[0].title }}
                                           </h3>
-                                          <p class="articles__date">Jun 1, 2022</p>
+                                          <p class="articles__date">{{ listBlog[0].createdAt }}</p>
                                     </div>
                                     <p class="articles__text">
-                                          Excited him now natural saw passage offices you minuter. At by asked being
-                                          court hopes.
+                                          {{ listBlog[0].description }}
                                     </p>
                               </div>
                         </div>
                         <div class="col">
                               <div class="articles__list">
-                                    <div class="articles__card small">
-                                          <img
-                                                class="articles__thumb"
-                                                alt=""
-                                                src="../../../assets/images/article-2.png"
-                                          />
-                                          <div class="articles__wrap-content">
-                                                <h3 class="articles__name">Mountains is always right destination.</h3>
-
-                                                <p class="articles__text">Farther so friends am to detract forbade</p>
-                                                <p class="articles__date">Jun 1, 2022</p>
-                                          </div>
-                                    </div>
-                                    <div class="articles__card small">
-                                          <img
-                                                class="articles__thumb"
-                                                alt=""
-                                                src="../../../assets/images/article-3.png"
-                                          />
-                                          <div class="articles__wrap-content">
-                                                <h3 class="articles__name">
-                                                      Here Our's Life is either a daring adventure.
-                                                </h3>
-
-                                                <p class="articles__text">
-                                                      One of the programs is Save Our I have personally.
-                                                </p>
-                                                <p class="articles__date">Jun 1, 2022</p>
-                                          </div>
-                                    </div>
-                                    <div class="articles__card small">
-                                          <img
-                                                class="articles__thumb"
-                                                alt=""
-                                                src="../../../assets/images/article-4.png"
-                                          />
-                                          <div class="articles__wrap-content">
-                                                <h3 class="articles__name">
-                                                      Here Our's Life is either a daring adventure.
-                                                </h3>
-
-                                                <p class="articles__text">
-                                                      Life is either a daring adventure or it's nothing
-                                                </p>
-                                                <p class="articles__date">Jun 1, 2022</p>
-                                          </div>
-                                    </div>
+                                    <article-details
+                                          *ngFor="let blog of listBlog.slice(0, 3)"
+                                          class="articles__card small"
+                                          [blog]="blog"
+                                    >
+                                    </article-details>
                               </div>
                         </div>
                   </div>

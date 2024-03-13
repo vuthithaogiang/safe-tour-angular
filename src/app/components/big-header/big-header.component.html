@@ -20,12 +20,12 @@
                   <img class="big-header__banner-decoraton" alt="" src="../../../assets/images/shapes.png" />
 
                   <div class="big-header__banner-total-trip">
-                        <div class="pie animate" style="--p: 39; --c: #d3ed6f">
-                              <strong>39</strong>
+                        <div class="pie animate" style="--p:  {{ timesTraveled }} ;--c: #d3ed6f">
+                              <strong>{{ timesTraveled }}</strong>
                               <p>Times traveled</p>
                         </div>
                         <div class="big-header__banner-inner-card">
-                              <strong>224</strong>
+                              <strong>{{ totalTrip }}</strong>
                               <p>Total trip (momth)</p>
                         </div>
                   </div>
@@ -33,39 +33,8 @@
 
             <div class="big-header__stats d-xl-none">
                   <div class="big-header__stats-list">
-                        <div class="big-header__stats-item">
-                              <span class="big-header__stats-wrap-icon"
-                                    ><img
-                                          class="big-header__stats-icon"
-                                          alt=""
-                                          src="../../../assets/icons/experience.png"
-                              /></span>
-                              <span class="big-header__stats-details">
-                                    <span class="big-header__stats-number">12</span>
-                                    <span class="big-header__stats-type">Years Experience</span>
-                              </span>
-                        </div>
-                        <div class="big-header__stats-item">
-                              <span class="big-header__stats-wrap-icon">
-                                    <img class="big-header__stats-icon" alt="" src="../../../assets/icons/award.png"
-                              /></span>
-                              <span class="big-header__stats-details">
-                                    <span class="big-header__stats-number">29</span>
-                                    <span class="big-header__stats-type">Awards Gained</span>
-                              </span>
-                        </div>
-                        <div class="big-header__stats-item">
-                              <span class="big-header__stats-wrap-icon">
-                                    <img
-                                          class="big-header__stats-icon"
-                                          alt=""
-                                          src="../../../assets/icons/buildings.png"
-                              /></span>
-                              <span class="big-header__stats-details">
-                                    <span class="big-header__stats-number">735+</span>
-                                    <span class="big-header__stats-type">Property Build</span>
-                              </span>
-                        </div>
+                        <stats-item class="big-header__stats-item" *ngFor="let item of listStats" [statsItem]="item">
+                        </stats-item>
                   </div>
             </div>
       </div>

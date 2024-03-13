@@ -4,54 +4,12 @@
             <p class="top-destination__desc">Sost Brilliant reasons Entrada should be your one-stop-shop!</p>
             <div class="top-destination__masonry-layout">
                   <div class="masony-wrapper">
-                        <div class="masony-item col-span-3">
-                              <img class="masony-img" alt="" src="../../../assets/images/top-destination-1.png" />
-                              <span class="top-destination__star"> 3.5 </span>
-                              <span class="top-destination__location">
-                                    <h3>Vietnam</h3>
-                                    <p>Worefall</p>
-                              </span>
-                        </div>
-                        <div class="masony-item col-span-4 row-span-2">
-                              <img class="masony-img" alt="" src="../../../assets/images/top-destination-2.png" />
-                              <span class="top-destination__star"> 3.5 </span>
-                              <span class="top-destination__location">
-                                    <h3>Vietnam</h3>
-                                    <p>Worefall</p>
-                              </span>
-                        </div>
-                        <div class="masony-item col-span-5">
-                              <img class="masony-img" alt="" src="../../../assets/images/top-destination-3.png" />
-                              <span class="top-destination__star"> 3.5 </span>
-                              <span class="top-destination__location">
-                                    <h3>Vietnam</h3>
-                                    <p>Worefall</p>
-                              </span>
-                        </div>
-                        <div class="masony-item col-span-3">
-                              <img class="masony-img" alt="" src="../../../assets/images/top-destination-4.png" />
-                              <span class="top-destination__star"> 3.5 </span>
-                              <span class="top-destination__location">
-                                    <h3>Vietnam</h3>
-                                    <p>Worefall</p>
-                              </span>
-                        </div>
-                        <div class="masony-item col-span-2">
-                              <img class="masony-img" alt="" src="../../../assets/images/top-destination-5.png" />
-                              <span class="top-destination__star"> 3.5 </span>
-                              <span class="top-destination__location">
-                                    <h3>Vietnam</h3>
-                                    <p>Worefall</p>
-                              </span>
-                        </div>
-                        <div class="masony-item col-span-3">
-                              <img class="masony-img" alt="" src="../../../assets/images/top-destination-6.png" />
-                              <span class="top-destination__star"> 3.5 </span>
-                              <span class="top-destination__location">
-                                    <h3>Vietnam</h3>
-                                    <p>Worefall</p>
-                              </span>
-                        </div>
+                        <destination-details
+                              class="masony-item"
+                              *ngFor="let d of destinations; index as idex"
+                              [destination]="d"
+                        >
+                        </destination-details>
                   </div>
             </div>
       </div>
